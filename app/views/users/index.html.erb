@@ -1,6 +1,6 @@
 
 <h1>All User</h1>
 <% @users.each do |user|%>
-  <%= user.id %>
+  <h2><%= user.user_name %></h2>
   <%= link_to "Delete User", user_path(user), method: :delete%>
 <% end %>

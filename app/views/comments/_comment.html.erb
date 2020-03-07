@@ -1,4 +1,8 @@
 <hr />
-<p>Author: <%= comment.user_id %></p>
+<%@user = User.find(comment.user_id) %>
+
+
+
+<p>Author: <%= @user.user_name %></p>
 <p><strong><%= comment.body %></strong></p>
 </hr>
