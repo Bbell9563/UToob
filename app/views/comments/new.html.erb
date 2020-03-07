@@ -1,8 +1,12 @@
 <h1>Add A comment</h1>
 <%= form_with(model: [@movie, @comment], locale: true) do |f| %>
-  <%= f.text_field :user_id, :value => current_user.id, :readonly => true, :hidden => true %>
+
+  <%= f.text_field :user_id, :value => current_user.id, :readonly => true, :hidden => true%>
+  
   <%= f.label :body %>
-  <%= f.text_field :body, :require => true%>
+  <%= f.text_area :body, required: true%>
+  
+
   <br />
   <%= f.submit nil %>
 <% end %>

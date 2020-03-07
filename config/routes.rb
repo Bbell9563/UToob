@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   
   root 'movies#index'
 
+  get '/users/', to: 'users#index', as: 'users'
+  get '/user/:id', to: 'users#show', as: 'user'
+  delete '/user/:id', to: 'users#destroy'
+
+
   resources :movies do
     resources :comments
   end

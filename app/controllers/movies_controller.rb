@@ -8,6 +8,11 @@ class MoviesController < ApplicationController
   def show
   end
 
+  def show_user
+    @users = User.all
+
+  end
+
   def new
     @movie = Movie.new
   end
