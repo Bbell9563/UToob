@@ -1,11 +1,18 @@
 
+    
+    
 <h1><%= @movie.title %></h1>
+
 
 <h3><%= @movie.duration %></h3>
 <h3><%= @movie.genre%></h3>
 <h3><a href= <%= @movie.description %> >Link to IMDB Page</a><h3>
 <iframe title="YouTube video player" width="640" height="390" src= <%= @movie.trailer %> frameborder="0" allowfullscreen></iframe>
 
+<% if current_user.role == "admin"%>
+  <h4><%= link_to "Delete Movie", movie_path(@movie), method: :delete%></h4>
+  <h4><%= link_to "Update Movie", edit_movie_path(@movie)%></h4>
+<% end %>
 <h2>Comments</h2>
 
 <% @movie.comments.each do |comment| %>
