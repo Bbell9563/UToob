@@ -2,6 +2,10 @@ class CommentsController < ApplicationController
   before_action :set_movie
   before_action :set_user, only: [:new, :create]
 
+  def index
+    @comments = @movie.comments.all
+  end
+
   def new
     @comment = Comment.new
   end
