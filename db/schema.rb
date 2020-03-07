@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2020_03_07_171757) do
     t.string "duration"
     t.string "genre"
     t.string "description"
-    t.string "trailor"
+    t.string "trailer"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
