@@ -32,12 +32,8 @@ Movie.create(
         duration: '1hr 51min',
         genre: 'Action',
         description: 'http://www.imdb.com/title/tt0266697/?ref_=nv_sr_1',
-<<<<<<< HEAD
-        trailer: 'https://www.youtube.com/embed/ot6C1ZKyiME')
-=======
         trailer: 'https://www.youtube.com/embed/ot6C1ZKyiME'
 )        
->>>>>>> beeb4c9b3646e9d30a97a43019c0158ca855a720
 Movie.create(
           title: 'Gladiator',
           duration: '2hr 35min',
