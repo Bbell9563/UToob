@@ -1,7 +1,7 @@
 <h1>Your Favorite movies</h1>
 
   <% @movies.each do |movie| %>
-    <h3><%= link_to "#{movie.title}", movie_path(movie) %></h3>
+  <h3><%= link_to "#{movie.title}", movie_path(movie) %></h3>
     <% if current_user.role == "admin"%>
       <%= link_to "Delete Movie", movie_path(movie), method: :delete%>
       <%= link_to "Update Movie", edit_movie_path(movie)%>
@@ -13,5 +13,3 @@
 
 <br>
 <br>
-
-
