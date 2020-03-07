@@ -8,6 +8,11 @@ class MoviesController < ApplicationController
   def show
   end
 
+  def show_user
+    @users = User.all
+
+  end
+
   def new
     @movie = Movie.new
   end
@@ -43,6 +48,6 @@ class MoviesController < ApplicationController
     end
 
     def movies_params
-      params.require(:movie).permit(:title, :duration, :genre, :description, :trailor)
+      params.require(:movie).permit(:title, :duration, :genre, :description, :trailer)
     end
 end
