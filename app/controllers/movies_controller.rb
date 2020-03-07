@@ -8,6 +8,7 @@ class MoviesController < ApplicationController
   end
 
   def new
+    @movie = 
   end
 
   def create
@@ -22,7 +23,7 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-
+    @movie.destroy 
   end
 
   private
