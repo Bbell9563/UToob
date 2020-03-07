@@ -1,5 +1,6 @@
-class CommentController < ApplicationController
+class CommentsController < ApplicationController
   before_action :set_movie
+  before_action :set_user, only: [:new, :create]
 
   def new
     @comment = Comment.new
@@ -8,7 +9,7 @@ class CommentController < ApplicationController
   def create
     @comment = @movie.comments.new(comment_params)
     if @comment.save
-      redirect_to movie_path(@movie, @topic)
+      redirect_to movie_path(@movie)
     else
       render :new
     end
@@ -20,7 +21,7 @@ class CommentController < ApplicationController
     end
 
     def set_user
-      @user = @movie.user
+      @user = current_user
     end
 
     def comment_params

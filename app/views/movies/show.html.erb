@@ -1,2 +1,17 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+
+<h1><%= @movie.title %></h1>
+
+<h3><%= @movie.duration %></h3>
+<h3><%= @movie.genre%></h3>
+<h3><%= @movie.description %></h3>
+<h3><%= @movie.trailer %></h3>
+
+<h2>Comments</h2>
+
+<% @movie.comments.each do |comment| %>
+  <%= render 'comments/comment', { comment: comment } %>
+<% end %>
+
+<hr />
+<%= link_to 'Add Comment', new_movie_comment_path(@movie) %>
+<
