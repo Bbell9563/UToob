@@ -1,19 +1,20 @@
 <div class="ui secondary pointing menu">
+  <%if user_signed_in?%>
   <a class="item">
     <h4><%= link_to "Movie List", movies_path%></h4>
   </a>
   <a class="item">
     <h4><%= link_to "Add New Movie", new_movie_path %></h4>
   </a>
+  <%if current_user.role=="admin"%>
   <a class="item">
     <h4><%= link_to "USER PAGE??", new_movie_path %></h4>
   </a>
-  <div class="right menu">
-    <a class="item">
-      
-      <%= link_to "Log Out", destroy_user_session_path	, method: :delete %>
-
-
-    </a>
-  </div>
+  <%end%>
+    <div class="right menu">
+      <a class="item">
+        <h4><%= link_to "Log Out", destroy_user_session_path	, method: :delete %></h4>
+      </a>
+    </div>
+  <%end%>
 </div>
