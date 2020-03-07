@@ -18,7 +18,7 @@ Movie.create(
       duration: '1hr 59min',
       genre: 'Action',
       description: 'http://www.imdb.com/title/tt0258463/',
-      trailer: 'https://www.youtube.com/embed/cD-uQreIwEk'
+      trailer: 'https://www.youtube.com/embed/cD-uQreIwEk' 
 )
 Movie.create(
         title: 'Avatar',

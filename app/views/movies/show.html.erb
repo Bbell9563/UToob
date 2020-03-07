@@ -4,8 +4,8 @@
 <h3><%= @movie.duration %></h3>
 <h3><%= @movie.genre%></h3>
 <h3><%= @movie.description %></h3>
-<h3><%= @movie.trailer %></h3>
-<iframe title="YouTube video player" width="640" height="390" src='https://www.youtube.com/embed/EXeTwQWrcwY' frameborder="0" allowfullscreen></iframe>
+<iframe title="YouTube video player" width="640" height="390" src= <%= @movie.trailer %> frameborder="0" allowfullscreen></iframe>
+
 <h2>Comments</h2>
 
 <% @movie.comments.each do |comment| %>
