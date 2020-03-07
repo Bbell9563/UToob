@@ -14,4 +14,6 @@
 
 
 <hr />
-<%= link_to 'Add Comment', new_movie_comment_path(@movie) %>
+<button><%= link_to 'Add Comment', new_movie_comment_path(@movie) %></button>
+
+<button><%= link_to 'Back to Movies', root_path, class: "active item" %></button> 
