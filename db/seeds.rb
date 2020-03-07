@@ -11,7 +11,7 @@ Movie.create(
     duration: '2hr 32min',
     genre: 'Action',
     description: 'http://www.imdb.com/title/tt0468569/',
-    trailer: 'https://www.youtube.com/embed/EXeTwQWrcwY'
+    trailer: <iframe title="YouTube video player" width="640" height="390" src='https://www.youtube.com/embed/EXeTwQWrcwY' frameborder="0" allowfullscreen></iframe>
 )
 Movie.create(
       title: 'The Bourne Identity',
