@@ -20,7 +20,7 @@ class CommentController < ApplicationController
     end
 
     def set_user
-      @user = User.find(params[:user_id])
+      @user = @movie.user
     end
 
     def comment_params
