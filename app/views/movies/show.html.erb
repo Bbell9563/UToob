@@ -1,11 +1,11 @@
 
     
     
-<h1><%= @movie.title %></h1>
+<h1 style="font-size: 50px; text-align: center;"><%= @movie.title %></h1>
 
 
-<h3><%= @movie.duration %></h3>
-<h3><%= @movie.genre%></h3>
+<h3>Duration: <%= @movie.duration %></h3>
+<h3>Genre: <%= @movie.genre%></h3>
 <h3><a href= <%= @movie.description %> >Link to IMDB Page</a><h3>
 <iframe title="YouTube video player" width="640" height="390" src= <%= @movie.trailer %> frameborder="0" allowfullscreen></iframe>
 

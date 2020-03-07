@@ -1,5 +1,5 @@
-<h2>Log in</h2>
-
+<h2 style = "text-align: center;font-size: 50px">Log in</h2>
+<div style="display: flex; justify-content: center">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -23,4 +23,8 @@
   </div>
 <% end %>
 
+
+</div>
+<div style="display: flex; justify-content: center">
 <%= render "devise/shared/links" %>
+</div>
